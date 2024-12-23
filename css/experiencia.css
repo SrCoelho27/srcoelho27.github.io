@@ -1,0 +1,119 @@
+.experiencia {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  gap: 100px;
+}
+
+.experiencia .subtitulo {
+  word-break: break-all;
+  max-width: 4ch;
+}
+
+.texto {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  color: #525252;
+  margin-bottom: 60px;
+  max-width: 40ch;
+}
+
+.projeto-titulo {
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+.projeto p {
+  font-size: .875rem;
+  color: #525252;
+}
+
+.habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: start;
+
+  & li {
+    padding: .2rem .8rem;
+    background: #fff;
+    border-radius: 4px;
+  }
+}
+
+.projeto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px 30px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  gap: 20px 60px;
+  background: #f5f5f5;
+  position: relative;
+}
+
+.projeto::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(#B6F829, #67DD0A);
+  position: absolute;
+  left: -4px;
+  top: 20px;
+}
+
+.ano-projeto {
+  position: absolute;
+  left: -120px;
+  top: 22px;
+  width: 70px;
+  text-align: end;
+}
+
+@media (max-width:1000px) {
+  .experiencia .subtitulo {
+    font-size: 6rem;
+  }
+
+  .experiencia {
+    align-items: center;
+  }
+}
+
+
+@media (max-width:800px) {
+  .experiencia {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .experiencia .subtitulo {
+    word-break: normal;
+    font-size: 2.5rem;
+    color: #141414;
+    text-transform: capitalize;
+  }
+
+  .ano-projeto {
+    left: 110px;
+    text-align: left;
+    top: 21px;
+  }
+
+  .ano-projeto::before {
+    content: "(";
+  }
+
+  .ano-projeto::after {
+    content: ")";
+  }
+}
+
+@media (max-width:400px) {
+  .experiencia .subtitulo {
+    font-size: 2.5rem;
+  }
+}

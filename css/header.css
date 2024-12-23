@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  & a {
+    display: block;
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .header-menu a {
+    background: #ddd;
+    border-radius: 4px;
+    padding: .4rem .8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header-menu a {
+    display: block;
+    background: #ddd;
+    border-radius: 4px;
+    padding: .4rem .8rem;
+  }
+}
